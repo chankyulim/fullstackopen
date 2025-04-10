@@ -1,3 +1,7 @@
+This is the old notes diagram for 
+https://studies.cs.helsinki.fi/exampleapp/notes
+
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -25,3 +29,4 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+```
