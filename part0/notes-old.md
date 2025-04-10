@@ -1,10 +1,16 @@
-This is the old notes diagram for 
+# Exercise 0.4: New note diagram
+This is what happens when the user writes a new note and clicks on "Save" on this page:\
 https://studies.cs.helsinki.fi/exampleapp/notes
 
 ```mermaid
 sequenceDiagram
     participant browser
     participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+
+    Note left of server: The server executes the code that posts the new note, then redirects to the notes page
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -29,4 +35,9 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/favicon.ico
+    activate server
+    server-->>browser: the favorite icon file
+    deactivate server
 ```
