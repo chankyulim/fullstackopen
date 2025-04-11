@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <>
-      <p>{friends}</p>>
+      <p>{friends}</p>
     </>
   )
 }
